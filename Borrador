@@ -1,0 +1,22 @@
+.bubble-text{
+  font-size: clamp(2rem, calc(2rem +3.5vw), 8 rem);
+  color: white;
+  user-select: none;
+}
+& .split-char{
+  font-weight: 200;
+  transition: font-weight 0.5s ease;
+  
+  &:hover{
+  font-weight: var(--_fw-900);
+  color: var(--_clr-900);
+}}
+
+&:has(+ .bubble-text:hover){
+  font-weight: var(--_fw-700);
+  color: var(--_clr-700);
+}
+&:has(+ .split-char + .split-char:hover){
+  font-weight: var(--_fw-400);
+  color: var(--_clr-400);
+}
